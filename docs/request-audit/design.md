@@ -28,10 +28,10 @@
 - `DemoSiteEnabled = true`：演示模式
 - 两者都为 `false`：对外运营模式
 
-因此，请求审计的启用条件定义为：
+请求审计支持所有模式，模式值仅用于记录来源分类，不再作为启用条件：
 
 ```text
-operation_setting.SelfUseModeEnabled || operation_setting.DemoSiteEnabled
+ShouldEnableRequestAudit() == true
 ```
 
 ### 2.2 日志权限模型

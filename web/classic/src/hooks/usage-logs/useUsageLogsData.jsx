@@ -48,11 +48,7 @@ export const useLogsData = () => {
   const { t } = useTranslation();
   const [statusState] = useContext(StatusContext);
   const requestAuditStatusReady = Boolean(statusState?.status);
-  const requestAuditEnabled =
-    requestAuditStatusReady &&
-    (statusState?.status?.self_use_mode_enabled ||
-      statusState?.status?.demo_site_enabled ||
-      false);
+  const requestAuditEnabled = requestAuditStatusReady;
 
   // Define column keys for selection
   const COLUMN_KEYS = {

@@ -103,7 +103,7 @@ func (w *auditResponseWriter) Bytes() []byte {
 }
 
 func ShouldEnableRequestAudit() bool {
-	return operation_setting.SelfUseModeEnabled || operation_setting.DemoSiteEnabled
+	return true
 }
 
 func GetRequestAuditMode() string {
